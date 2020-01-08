@@ -1,1 +1,1 @@
-# netitys-scripts
+# Linux bash scripts pratice
