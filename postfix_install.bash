@@ -83,7 +83,7 @@ cp ./dovecot_dovecot-sql.conf.ext /etc/dovecot/dovecot-sql.conf.ext
 cp ./nginx_cert_domain "/etc/nginx/sites-available/${postfix_domain}"
 ln -s "/etc/nginx/sites-available/${postfix_domain}" "/etc/nginx/sites-enabled/${postfix_domain}"
 systemctl reload nginx
-letsencrypt certonly --non-interactive --email asiakaspalvelimet@netitys.fi --agree-tos --webroot -w /var/www/certs/ -d "${postfix_domain}"
+letsencrypt certonly --non-interactive --email asiakaspalvelimet@example.fi --agree-tos --webroot -w /var/www/certs/ -d "${postfix_domain}"
 
 
 
@@ -227,7 +227,7 @@ service amavis restart
 chown vmail: /var/run/dovecot/auth-userdb
 
 #systemctl reload nginx
-#letsencrypt certonly --non-interactive --email asiakaspalvelimet@netitys.fi --agree-tos --webroot -w /var/www/postfixadmin/ -d "${postfixadmin_domain}"
+#letsencrypt certonly --non-interactive --email asiakaspalvelimet@example.fi --agree-tos --webroot -w /var/www/postfixadmin/ -d "${postfixadmin_domain}"
 #cp ./nginx_postihallinta.domain.dom "/etc/nginx/sites-available/${postfixadmin_domain}"
 #sed -i \
 # -e "s/postfixadmin_domain/${postfixadmin_domain}/g" \
